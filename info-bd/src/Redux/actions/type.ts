@@ -1,0 +1,3 @@
+
+export const STORE_ALL_POSTS = 'STORE_ALL_POSTS'
+export const GET_ALL_POSTS = 'GET_ALL_POSTS'
