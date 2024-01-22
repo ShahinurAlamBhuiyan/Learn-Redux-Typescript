@@ -58,7 +58,7 @@ const AllPosts = ({ storeAllPosts, allPosts, storeSinglePost, singlePost, change
 
             <Modal
                 show={popUpStatus}
-                onHide={() => changePopUpStatus(false)}
+                onHide={() => { changePopUpStatus(false); storeSinglePost({}) }}
                 size="lg"
                 aria-labelledby="contained-modal-title-vcenter"
                 centered
@@ -75,7 +75,7 @@ const AllPosts = ({ storeAllPosts, allPosts, storeSinglePost, singlePost, change
                     </p>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button onClick={() => changePopUpStatus(false)}>Close</Button>
+                    <Button onClick={() => { changePopUpStatus(false); storeSinglePost({}) }}>Close</Button>
                 </Modal.Footer>
             </Modal>
 
