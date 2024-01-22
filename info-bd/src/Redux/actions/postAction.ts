@@ -1,4 +1,4 @@
-import { STORE_ALL_POSTS, STORE_SINGLE_POST } from "./type"
+import { CHANGE_POP_UP, STORE_ALL_POSTS, STORE_SINGLE_POST } from "./type"
 
 export const storeAllPost = (posts) => dispatch => {
     dispatch({
@@ -12,5 +12,12 @@ export const storeSinglePost = (post) => dispatch => {
     dispatch({
         type: STORE_SINGLE_POST,
         payload: post
+    })
+}
+
+export const changePopUp = (changedStatus) => dispatch => {
+    dispatch({
+        type: CHANGE_POP_UP,
+        payload: changedStatus
     })
 }

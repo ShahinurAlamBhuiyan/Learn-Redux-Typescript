@@ -1,4 +1,4 @@
-import { STORE_ALL_POSTS, STORE_SINGLE_POST } from "../actions/type";
+import { CHANGE_POP_UP, STORE_ALL_POSTS, STORE_SINGLE_POST } from "../actions/type";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const initialState = {
@@ -20,6 +20,11 @@ export const postReducer = (state = initialState, action: any) => {
         singlePost: action.payload,
       };
 
+    case CHANGE_POP_UP:
+        return {
+            ...state,
+            isPopUp: action.payload,
+        }
     default:
       return state;
   }
@@ -27,3 +32,4 @@ export const postReducer = (state = initialState, action: any) => {
 
 export const getAllPosts = (rootState) => rootState.posts.posts;
 export const getSinglePost = (rootState) => rootState.posts.singlePost;
+export const getPopUpStatus = (rootState) => rootState.posts.isPopUp;
