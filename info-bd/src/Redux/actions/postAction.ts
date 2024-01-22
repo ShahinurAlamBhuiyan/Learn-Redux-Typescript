@@ -1,5 +1,4 @@
-// import { getAllPosts } from './../reducers/postReducer';
-import { GET_ALL_POSTS, STORE_ALL_POSTS } from "./type"
+import { STORE_ALL_POSTS, STORE_SINGLE_POST } from "./type"
 
 export const storeAllPost = (posts) => dispatch => {
     dispatch({
@@ -8,9 +7,10 @@ export const storeAllPost = (posts) => dispatch => {
     })
 }
 
-// export const getAllPosts = (posts) => dispatch => {
-//     dispatch({
-//         type: GET_ALL_POSTS,
-//         payload: posts
-//     })
-// }
+export const storeSinglePost = (post) => dispatch => {
+    // console.log(post, 'post')
+    dispatch({
+        type: STORE_SINGLE_POST,
+        payload: post
+    })
+}
